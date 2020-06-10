@@ -96,7 +96,7 @@ function solve(problem::EstimationProblem, solver::InvDistWeight)
           values = view(z, idxs)
 
           varμ[location] = sum(weights[i]*values[i] for i in eachindex(values))
-          varσ[location] = minimum(dists)
+          varσ[location] = maximum(dists)
         end
       end
 
