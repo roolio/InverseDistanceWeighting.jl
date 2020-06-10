@@ -97,6 +97,7 @@ function solve(problem::EstimationProblem, solver::InvDistWeight)
 
           varμ[location] = sum(weights[i]*values[i] for i in eachindex(values))
           varσ[location] = maximum(dists)
+          @show(dists)          
         end
       end
 
